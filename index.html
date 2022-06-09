@@ -6,11 +6,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="galeria.css">
+    <script src="myscripts.js"></script>
+
     <script src="https://kit.fontawesome.com/c7bb55f8db.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-    <h1 class="title is-1 has-text-white">CONVERSE COMIGO!</h1>
+    <div class="container-titulos">
+    <div class="sub mb-3">
+  <h2 class="subtitle">Meus Trabalhos</h2>
+    </div>
+  <h1 class="title has-text-white">Obras em destaque</h1>
+      </div>
+
+      
+<section class="section">
+  <div class="container is-fluid">
+      <div class="columns">
+          <div class="column">
+              <img class="borda" src="./imgs/macsz.png" onclick="openModal();currentSlide(1)">
+              <img class="borda" src="./imgs/kageyama.png" onclick="openModal();currentSlide(4)">
+          </div>
+          <div class="column">
+              <img class="borda" src="./imgs/doctor.png" onclick="openModal();currentSlide(2)">
+              <img class="borda" src="./imgs/coca.png" onclick="openModal();currentSlide(5)">
+          </div>
+          <div class="column">
+              <img class="borda" src="./imgs/doctor-mobile.png" onclick="openModal();currentSlide(3)">
+              <img src="" onclick="openModal();currentSlide(6)">
+          </div>
+      </div>
+
+      <div class="modal" id="myModal">
+          <div class="modal-content is-vcentered">
+            <div class="item-slide">
+              <img src="./imgs/macsz.png">
+            </div>
+            <div class="item-slide">
+              <img src="./imgs/doctor.png">
+            </div>
+            <div class="item-slide">
+              <img src="./imgs/coca.png">
+            </div>
+            <div class="item-slide">
+              <img src="./imgs/kageyama.png">
+            </div>
+            <div class="item-slide">
+              <img src="./imgs/doctor-mobile.png">
+            </div>
+            
+          </div>
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        <button onclick="closeModal()" class="modal-close is-large" aria-label="close"></button>
+      </div>
+  </div>
+</section>
+  
+      <div class="container-converse mb-5">
+    <h1 class="title is-1">Converse comigo!</h1>
+  </div>
 
 
             <div class="columns">
@@ -59,10 +115,10 @@
                                     </div>
                             </div>
                     </div>
-                    <div class="column">
+                    <div class="column" id="estudando">
                         <div class="column">
                             <figure class="">
-                                <img class="is-rounded" src="./studying.png">
+                                <img class="is-rounded" src="./imgs/studying.png">
                               </figure>
                         </div>
                     </div>
@@ -85,7 +141,7 @@
              has-text-left
              has-text-white
              mb-4">
-    <img src="./sanches-logo 1.png" alt="">
+    <img src="./imgs/sanches-logo 1.png" alt="logo">
   </h1>
 
   <!-- footer content -->
@@ -149,27 +205,27 @@
   </h4>
 
   <!-- Column 3 lists with links -->
-  <p class="bd-footer-link">
-      <a href="https://">
-          <span class="icon-text is-size-3 has-text-white mb-3">
+  <p class="bd-footer-link" id="coluna-3">
+      <a href="https://www.instagram.com/xanxesbr/">
+          <span class="icon-text is-size-3 has-text-white">
             <i class="fa-brands fa-instagram"></i>
           </span>
         </a>
       <br />
-      <a href="https://">
-        <span class="icon-text is-size-3 has-text-white mb-3">
-            <i class="fa-brands fa-facebook"></i>
+      <a href="https://twitter.com/xanxesbr">
+        <span class="icon-text is-size-3 has-text-white">
+          <i class="fa-brands fa-twitter"></i>
           </span>
         </a>
       <br />
       <a href="https://">
-        <span class="icon-text is-size-3 has-text-white mb-3">
+        <span class="icon-text is-size-3 has-text-white">
             <i class="fa-brands fa-linkedin"></i>
           </span>
         </a>
         <br />
-      <a href="https://">
-        <span class="icon-text is-size-3 has-text-white mb-3">
+      <a href="https://github.com/xanxes">
+        <span class="icon-text is-size-3 has-text-white">
             <i class="fa-brands fa-github"></i>
           </span>
         </a>
@@ -178,6 +234,7 @@
   </p>
 
 </div>
+
 <!-- Column 4 -->
 <div class="column">
     <h4 class="bd-footer-title
